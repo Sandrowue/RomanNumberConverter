@@ -45,4 +45,8 @@ function convertToRoman(num) {
     return romanStr.replace(grammarRegIV, 'IV').replace(grammarRegIX, 'IX').replace(grammarRegXL, 'XL').replace(grammarRegXC, 'XC').replace(grammarRegCD, 'CD').replace(grammarRegCM, 'CM')
 }
 
-console.log(convertToRoman(15501));
+module.exports = { convertToRoman };
+
+if (require.main === module) {
+    console.log(convertToRoman(4));
+}
